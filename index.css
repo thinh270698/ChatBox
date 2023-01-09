@@ -1,0 +1,229 @@
+Body {
+  Background: #E8EBF5;
+  Padding: 0;
+  Margin: 0;
+  Font-Family: Raleway;
+}
+.Chat-Box {
+  Height: 90%;
+  Width: 400px;
+  Position: Absolute;
+  Margin: 0 Auto;
+  Overflow: Hidden;
+  Display: -Webkit-Box;
+  Display: -Ms-Flexbox;
+  Display: Flex;
+  -Webkit-Box-Orient: Vertical;
+  -Webkit-Box-Direction: Normal;
+  /* -Ms-Flex-Direction: Column; */
+  flex-direction: column;
+  Flex-Direction: Column;
+  Z-Index: 15;
+  Box-Shadow: 0 0 10px Rgba(0, 0, 0, 0.005);
+  Right: 0;
+  Bottom: 0;
+  Margin: 15px;
+  Background: #Fff;
+  Border-Radius: 15px;
+  /* Visibility: Hidden; */
+}
+.Chat-Box-Header {
+  Height: 8%;
+  Border-Top-Left-Radius: 15px;
+  Border-Top-Right-Radius: 15px;
+  Display: Flex;
+  Font-Size: 14px;
+  Padding: 0.5em 0;
+  Box-Shadow: 0 0 3px Rgba(0, 0, 0, 0.2);
+  Box-Shadow: 0 0 3px Rgba(0, 0, 0, 0.2),
+      0 -1px 10px Rgba(172, 54, 195, 0.3);
+  Box-Shadow: 0 1px 10px Rgba(0, 0, 0, 0.025);
+}
+.Chat-Box-Header H3 {
+  Font-Family: Ubuntu;
+  Font-Weight: 400;
+  Float: Left;
+  Position: Absolute;
+  Left: 25px;
+}
+.Chat-Box-Header P {
+  Float: Right;
+  Position: Absolute;
+  Right: 16px;
+  Cursor: Pointer;
+  Height: 50px;
+  Width: 50px;
+  Text-Align: Center;
+  Line-Height: 3.25;
+  Margin: 0;
+}
+.Chat-Box-Body {
+  Height: 75%;
+  Background: #F8f8f8;
+  Overflow-Y: Scroll;
+  Padding: 12px;
+}
+.Chat-Box-Body-Send {
+  Width: 250px;
+  Float: Right;
+  Background: #7979dd;
+  Padding: 10px 20px;
+  Border-Radius: 5px;
+  Box-Shadow: 0 0 10px Rgba(0, 0, 0, 0.015);
+  Margin-Bottom: 14px;
+
+}
+.Chat-Box-Body-Send P {
+      Margin: 0;
+      Color: White;
+      Font-Size: 14px;
+      Margin-Bottom: 0.25rem;
+  }
+.Chat-Box-Body-Send Span {
+      Float: Right;
+      Color: White;
+      Font-Size: 10px;
+  }
+.Chat-Box-Body-Receive {
+    Width: 250px;
+    Float: Left;
+    Background: White;
+    Padding: 10px 20px;
+    Border-Radius: 5px;
+    Box-Shadow: 0 0 10px Rgba(0, 0, 0, 0.015);
+    Margin-Bottom: 14px;
+  }
+.Chat-Box-Body-Receive P {
+        Margin: 0;
+        Color: #444;
+        Font-Size: 14px;
+        Margin-Bottom: 0.25rem;
+    }
+.Chat-Box-Body-Receive Span {
+        Float: Right;
+        Color: #777;
+        Font-Size: 10px;
+    }
+
+.Chat-Box-Body-Receive::-Webkit-Scrollbar {
+    Width: 5px;
+    Opacity: 0;
+}
+
+.Chat-Box-Body-Footer {
+  Position: Relative;
+  Display: Flex;
+}
+
+.Chat-Box-Body-Footer Button {
+      Border: None;
+      Padding: 16px;
+      Font-Size: 14px;
+      Background: White;
+      Cursor: Pointer;
+    }
+.Chat-Box-Body-Footer Button:Focus {
+          Outline: None;
+      }
+
+.Chat-Box-Body-Footer Input {
+      Padding: 10px;
+      Border: None;
+      /* -Webkit-Appearance: None; */
+      Border-Radius: 50px;
+      Background: Whitesmoke;
+      Margin: 10px;
+      Font-Family: Ubuntu;
+      Font-Weight: 600;
+      Color: #444;
+      Width: 280px;
+    }
+.Chat-Box-Body-Footer Input:Focus {
+          Outline: None;
+      }
+
+.Chat-Box-Body-Footer .Send {
+      Vertical-Align: Middle;
+      Align-Items: Center;
+      Justify-Content: Center;
+      Transform: Translate(0px, 20px);
+      Cursor: Pointer;
+  }
+
+.Chat-Button {
+    Padding: 25px 16px;
+    Background: #2C50EF;
+    Width: 120px;
+    Position: Absolute;
+    Bottom: 0;
+    Right: 0;
+    Margin: 15px;
+    Border-Top-Left-Radius: 25px;
+    Border-Top-Right-Radius: 25px;
+    Border-Bottom-Left-Radius: 25px;
+    Box-Shadow: 0 2px 15px Rgba(#2C50EF, 0.21);
+    Cursor: Pointer;
+  }
+.Chat-Button Span::Before {
+            Content: "";
+            Height: 15px;
+            Width: 15px;
+            Background: #47cf73;
+            Position: Absolute;
+            Transform: Translate(0, -7px);
+            Border-Radius: 15px;
+        }
+.Chat-Button Span::After {
+            Content: "Message Us";
+            Font-Size: 14px;
+            Color: White;
+            Position: Absolute;
+            Left: 50px;
+            Top: 18px;
+        }
+.Modal {
+    Position: Fixed;
+    Left: 0;
+    Top: 0;
+    Width: 100%;
+    Height: 100%;
+    Background-Color: Rgba(0, 0, 0, 0.5);
+    Opacity: 0;
+    Visibility: Hidden;
+    Transform: Scale(1.1);
+    Transition: Visibility 0s Linear 0.25s, Opacity 0.25s 0s, Transform 0.25s;
+}
+.Modal-Content {
+    Position: Absolute;
+    Top: 50%;
+    Left: 50%;
+    Transform: Translate(-50%, -50%);
+    Background-Color: White;
+    Padding: 1rem 1.5rem;
+    Width: 24rem;
+    Border-Radius: 0.5rem;
+}
+.Modal-Close-Button {
+    Float: Right;
+    Width: 1.5rem;
+    Line-Height: 1.5rem;
+    Text-Align: Center;
+    Cursor: Pointer;
+    Border-Radius: 0.25rem;
+    Background-Color: Lightgray;
+}
+.Close-Button:hover {
+    Background-Color: Darkgray;
+}
+.Show-Modal {
+    Opacity: 1;
+    Visibility: Visible;
+    Transform: Scale(1);
+    Transition: Visibility 0s Linear 0s, Opacity 0.25s 0s, Transform 0.25s;
+    Z-Index: 30;
+}
+@Media Only Screen And(Max-Width: 450px) {
+    .Chat-Box {
+        Min-Width: 100% !Important;
+    }
+}
